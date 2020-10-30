@@ -1,5 +1,5 @@
-package sorting;
-import java.util.Arrays;
+package Algorithms.sorting;
+
 import java.util.Scanner;
 
 public class SelectionSort {
@@ -19,17 +19,17 @@ public class SelectionSort {
         }
     }
 
-    public void selectionSort(int[] arr){
-        for (int i = 0; i < arr.length-1; i++){
+    public void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
 
             int min = i;
-            for(int j = i+1 ; j<arr.length; j++){
-                if(arr[min]>arr[j])
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[min] > arr[j])
                     min = j;
             }
-             int temp = arr[min];
-             arr[min] = arr[i];
-             arr[i] = temp;
+            int temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
         }
     }
 }
